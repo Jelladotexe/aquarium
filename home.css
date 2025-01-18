@@ -1,0 +1,38 @@
+.jellyfish-position{
+    position: relative;
+}
+.jellyfish-position img{
+    position: absolute;
+    height: 200px;
+    width: auto;
+    transition: transform 0.5s ease-in-out ;
+}
+.jellyfishone{
+    opacity: 1;
+}
+.jellyfishtwo{
+    opacity: 0;
+}
+
+.jellyfish-position:hover img.jellyfishone{
+    opacity: 0;
+    animation: up 0.5s ease-in-out forwards;
+}
+.jellyfish-position:hover img.jellyfishtwo{
+    opacity: 1;
+    animation: up 0.5s ease-in-out forwards;
+    cursor: pointer;
+}
+
+@keyframes up{
+    0%{
+        transform: translateY(5px);
+    }
+    50%{
+        transform: translateY(-5px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
