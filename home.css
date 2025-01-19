@@ -1,11 +1,54 @@
+
+header {
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    background-color: rgba(130, 236, 255, 0.5); 
+    z-index: 1000; 
+    box-shadow: 0 2px 5px rgba(130, 210, 224, 0.2); 
+}
+.upper{
+    display: flex;
+    justify-content: space-around;
+}
+.upper-section{
+    position: relative;
+    color: #ade2f0;
+    font-size: medium;
+    text-decoration: none;
+}
+.upper-section::after{
+    content: "";
+    position: absolute;
+    background-color: #ade2f0;
+    height: 3px;
+    width: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -10px;
+    transition: 0.3s;
+}
+.upper-section:hover::after{
+    transform: translateX(0);
+    left: 0;
+    width: 100%;
+}
+.upper-section:hover{
+    color: #d7f8ff;
+}
+
 .jellyfish-position{
     position: relative;
 }
 .jellyfish-position img{
     position: absolute;
-    height: 200px;
+    height: 150px;
     width: auto;
     transition: transform 0.5s ease-in-out ;
+}
+.jellyfish{
+    margin-top: 50px;
 }
 .jellyfishone{
     opacity: 1;
