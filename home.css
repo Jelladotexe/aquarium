@@ -40,13 +40,34 @@ header {
 
 .jellyfish-position{
     position: relative;
+    left: 10vh;
 }
 .jellyfish-position img{
     position: absolute;
-    height: 150px;
-    width: auto;
+    width: 150px;
+    height: auto;
     transition: transform 0.5s ease-in-out ;
 }
+.jellyfish-position .tooltip, .main-position .tooltip{
+    position: absolute;
+    background-color: rgb(86, 114, 119,0.8);
+    color: #ade2f0;
+    padding: 6px 8px;
+    border-radius: 10px;
+    font-size: 12px;
+    top: 35px;
+    opacity: 0;
+    transition: opacity 0.15s;
+    pointer-events: none;
+    white-space: nowrap;
+}
+.main-position .tooltip{
+    top: -25px;
+}
+.jellyfish-position:hover .tooltip, .main-position:hover .tooltip{
+    opacity: 1;
+}
+
 .jellyfish{
     margin-top: 50px;
 }
@@ -66,6 +87,42 @@ header {
     animation: up 0.5s ease-in-out forwards;
     cursor: pointer;
 }
+
+.main-position{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin: 60px;
+    top: 60px;
+}
+.main-position img{
+    position: absolute;
+    height: auto;
+    transition: transform 0.5s ease-in-out ;
+}
+.main01{
+    opacity: 1;
+    width: 150px;
+}
+.main02{
+    opacity: 0;
+    width: 157px;
+}
+.main-position:hover img.main01{
+    opacity: 0;
+    animation: up 0.5s ease-in-out forwards;
+}
+.main-position:hover img.main02{
+    opacity: 1;
+    animation: up 0.5s ease-in-out forwards;
+    cursor: pointer;
+}
+
+
+
+
+
+
 
 @keyframes up{
     0%{
